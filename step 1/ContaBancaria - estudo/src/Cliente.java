@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Cliente {
     private String nome;
     private String cpf;
@@ -19,6 +21,10 @@ public class Cliente {
     }
     public void mostrarDados(){
         System.out.println("\nNome: "+nome+"\nCPF: "+cpf+"\nemail: "+email);
+    }
+    public void extrato(){
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println("Saldo: R$"+df.format(saldo));
     }
 
 
