@@ -17,7 +17,7 @@ public class Cliente {
         return cpf;
     }
     public void setSaldo(double novoSaldo){
-        this.saldo = novoSaldo;
+        this.saldo += novoSaldo;
     }
     public void mostrarDados(){
         System.out.println("\nNome: "+nome+"\nCPF: "+cpf+"\nemail: "+email);

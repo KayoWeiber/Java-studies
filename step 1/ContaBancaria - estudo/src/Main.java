@@ -11,12 +11,12 @@ public class Main {
 
         do {
             try {
-                System.out.println("\nMenu:\n1 - Cadastrar Cliente\n2 - Depositar\n3 - Sair");
+                System.out.println("\nMenu:\n1 - Cadastrar Cliente\n2 - Depositar\n3 - Listar Contas\n4 - Sair");
 
                 try {
                     System.out.print("Digite o valor desejado: "); String escolhaString = System.console().readLine();
                     escolha=Integer.parseInt(escolhaString);
-                    if(escolha<1||escolha>3){
+                    if(escolha<1||escolha>4){
                         System.out.println("Digite um número entre 1 e 3");
                     }else{
                         switch (escolha){
@@ -27,6 +27,9 @@ public class Main {
                                 Contas.depositar();
                                 break;
                             case 3:
+                                Contas.ListarContas();
+                                break;
+                            case 4:
                                 System.out.println("Saindo...");
                                 break;
                         }
@@ -39,7 +42,7 @@ public class Main {
                 System.out.println("O valor digitado não é válido, Digite um valor válido.");
 
             }
-        }while (escolha!=3);
+        }while (escolha!=4);
 
 
     }
