@@ -25,8 +25,20 @@ public class GerenciadorContas {
                     case 1:
                         if(idConta>11){
                             System.out.printf("Não é possível criar conta sem limite, atingiu a quantidade máxima.");
+                        }else{
+                            System.out.print("Digite o saldo inicial da conta: "); double saldoInicial = Double.parseDouble(System.console().readLine());
+                            if(saldoInicial<0){
+                                System.out.print("O valor digitado não é válido");
+                            }
+                            else {
+                                conta[idConta] = new Conta(idConta,saldoInicial);
+                                System.out.printf("Conta nº%d criada com sucesso",idConta);
+                                idConta++;
+                                break;
+                            }
+
                         }
-                        break;
+
                     case 2:
 
                         break;
@@ -34,6 +46,7 @@ public class GerenciadorContas {
                         System.out.printf("Por favor, digite um número entre 1 e 2.");
                         break;
                 }
+                break;
             }catch (Exception e){
                 System.out.println("Valor digitado não é válido.");
             }
