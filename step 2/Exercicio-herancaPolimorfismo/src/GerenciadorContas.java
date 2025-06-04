@@ -60,8 +60,6 @@ public class GerenciadorContas {
                         } catch (Exception e) {
                         System.out.println("O valor digitado não é válido.");
                         }
-
-                        break;
                     default:
                         System.out.printf("Por favor, digite um número entre 1 e 2.");
                         break;
