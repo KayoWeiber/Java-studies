@@ -1,3 +1,5 @@
+import java.awt.datatransfer.SystemFlavorMap;
+
 public class GerenciadorContas {
 //    Conta testeConta = new Conta(1,1000);
 //        testeConta.deposito(100);
@@ -40,6 +42,24 @@ public class GerenciadorContas {
                         }
 
                     case 2:
+                        try{
+                            if (idContaespecial>11){
+                                System.out.printf("Não é possível criar conta sem limite, atingiu a quantidade máxima.");
+                            }else{
+                                System.out.print("Digite o saldo inicial da conta: "); double saldoInicial = Double.parseDouble(System.console().readLine());
+                                System.out.print("Digite o limite da conta: "); double limiteInicial =  Double.parseDouble(System.console().readLine());
+                                if(saldoInicial<0 || limiteInicial<0){
+                                    System.out.print("O valor digitado não é válido.");
+                                }else{
+                                    contaEspecial[idContaespecial] =new ContaEspecial(idContaespecial,saldoInicial,limiteInicial);
+                                    System.out.printf("Conta com limite nº%d criada com sucesso",idContaespecial);
+                                    idContaespecial++;
+                                    break;
+                                }
+                            }
+                        } catch (Exception e) {
+                        System.out.println("O valor digitado não é válido.");
+                        }
 
                         break;
                     default:
