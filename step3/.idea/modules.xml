@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Step 3 - Fixation exercise/Step 3 - Fixation exercise.iml" filepath="$PROJECT_DIR$/Step 3 - Fixation exercise/Step 3 - Fixation exercise.iml" />
       <module fileurl="file://$PROJECT_DIR$/Step 3- Data Collections and Manipulation/Step 3- Data Collections and Manipulation.iml" filepath="$PROJECT_DIR$/Step 3- Data Collections and Manipulation/Step 3- Data Collections and Manipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/step3.iml" filepath="$PROJECT_DIR$/.idea/step3.iml" />
     </modules>
